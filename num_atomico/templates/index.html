@@ -8,10 +8,10 @@
 <body>
     <h1>Ricerca Elemento Chimico</h1>
     <form method="POST">
-        <label for="Numero Atomico">Atomic Number:</label>
+        <label for="Numero Atomico">Numero Atomico:</label>
         <input type="text" id="atomic_number" name="atomic_number" required>
         <br>
-        <button type="submit">Get Element Info</button>
+        <button type="submit">Ricerca</button>
     </form>
     {% if element_info %}
         {% if element_info == "Errore, inserire un numero atomico valido." %}
