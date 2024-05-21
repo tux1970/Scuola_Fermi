@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Information</title>
+</head>
+<body>
+    <h1>Element Information Finder</h1>
+    <form method="POST">
+        <label for="Numero Atomico">Atomic Number:</label>
+        <input type="text" id="atomic_number" name="atomic_number" required>
+        <br>
+        <button type="submit">Get Element Info</button>
+    </form>
+    {% if element_info %}
+        {% if element_info == "Errore, inserire un numero atomico valido." %}
+            <h2>{{ element_info }}</h2>
+        {% else %}
+            <h2>Element Information:</h2>
+            <ul>
+                <li><strong>Name:</strong> {{ element_info.name }}</li>
+                <li><strong>Symbol:</strong> {{ element_info.symbol }}</li>
+                <li><strong>Atomic Number:</strong> {{ element_info.atomic_number }}</li>
+                <li><strong>Atomic Weight:</strong> {{ element_info.atomic_weight }}</li>
+                <li><strong>Density:</strong> {{ element_info.density }}</li>
+                <li><strong>Melting Point:</strong> {{ element_info.melting_point }}</li>
+                <li><strong>Boiling Point:</strong> {{ element_info.boiling_point }}</li>
+            </ul>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
