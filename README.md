@@ -22,3 +22,7 @@ In sintesi, il numero atomico:
     Influenza le proprietà chimiche dell'elemento.
     In un atomo neutro, corrisponde al numero di elettroni.
 
+Libreria Python :
+
+pip install periodictable
+
